@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR, en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="asserts/icon-image.svg">
+    <title>DevNote</title>
+    <link type="text/css" rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="web-icon">
+                <img src="asserts/icon-image.svg" alt="DevNote icon">
+                <h1 id="page-title" title="DevNote">DevNote</h1>
+            </div>
+            <span id="mode-theme" title="Theme Light">🌙</span>
+        </header>
+        <h3 id="saved">The theme has been saved</h3>
+        <div class="how-it-works" id="how">
+            <h1>How it Works?</h1>
+            <p>
+                Add a list of steps you want to complete in your development projects! <br>
+                Do you need any help? send us an email message by clicking <a>here!</a>
+            </p>
+        </div>
+        <div class="add-steps">
+            <h2>Add steps to complete</h2>
+            <span  id="error-input">Adicione um titulo</span>
+            <div class="inbox">
+                <input type="text" id="add-title-steps-text" placeholder="Add list steps title" class="input">
+                <input type="text" id="add-steps-text" placeholder="Add list steps" class="input">
+                <button id="create-title">Create Title</button>
+                <button id="create-steps">Create Steps</button>
+            </div>
+        </div>
+        <div class="steps-list" id="steps">
+            <div class="list"></div>
+        </div>
+        <footer>
+            &copy;Copyright
+        </footer>
+    </main>
+    <script src="js/DevNote-script.js"></script>
+</body>
+</html>
