@@ -138,7 +138,6 @@ main .steps-list{
     border-radius: 2px;
     border: 0;
     width: 60%;
-    height: 30%;
     margin: auto;
     font-family: 'Poppins';
     overflow: auto;
@@ -195,21 +194,6 @@ main .steps-list .list .list-options input[type=checkbox]:checked::after{
 main .steps-list .list .list-options label{
     font-size: 16px;
 }
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding-block: 1.5rem;
-}
-.steps-list::-webkit-scrollbar{
-    width: 5px;
-    background-color: rgb(58, 58, 58);
-    border-radius: 20px;
-}
-.steps-list::-webkit-scrollbar-thumb{
-    background-color: blueviolet;
-}
 
 @media (max-width: 460px){
     main .add-steps .inbox button{
@@ -220,6 +204,5 @@ footer{
     }
     main .steps-list{
         width: 97%;
-        height: 60%;
     }
 }
