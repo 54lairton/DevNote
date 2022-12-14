@@ -15,7 +15,58 @@ body{
     color: black;
     background: transparent;
     transition: .5s;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+.progress{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.444);
+    backdrop-filter: blur(30px);
+    display: grid;
+    place-items: center;
+}
+.progress-content{
+    max-width: 420px;
+    background-color: rgb(0, 0, 0);
+    padding: 1.6rem 1.1rem;
+    color: white;
+    border-radius: 2px;
+}
+.progress-content h1{
+    font-size: 22px;
+    padding: 1.2rem 0;
+    color: white;
+    font-weight: 600;
+}
+.progress-content p{
+    font-size: 16px;
+    border-left: 2px solid blueviolet;
+    padding-left: 1.2rem;
+}
+.progress-content button{
+    margin:.7rem auto;
+    padding: .6rem 2.3rem;
+    display: block;
+    background-color: rgb(82, 82, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.delete-contain{
+    width: 200px;
+    margin: 1.1rem auto;
+    padding: 1.2rem;
+    border: 1px solid rgb(79, 79, 79);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.delete-contain:hover{
+    background-color: red;
+    border: none;
+    color: white;
 }
 main{
     width: 100vw;
@@ -44,6 +95,7 @@ main header .web-icon h1{
     color: rgb(0, 0, 0);
     padding: .3rem;
     font-size: 28px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.128);
 }
 
 main header #mode-theme{
@@ -57,9 +109,9 @@ main header #mode-theme:hover{
     transform:rotate(20deg) scale(1.2);
 }
 main #saved{
-    width: 40%;
+    width: 50%;
     display: none;
-    margin: auto;
+    margin:5px auto;
     background-color: rgb(0, 255, 0);
     text-align: center;
     padding: .5rem;
@@ -80,7 +132,7 @@ main .add-steps > h2{
 }
 
 main .add-steps .inbox input{
-    width: 300px;
+    width: 270px;
     margin: .3rem 2px;
     padding: 1.0rem 1.1rem;
     font-size: 17px;
@@ -94,21 +146,35 @@ main .add-steps .inbox input::placeholder{
     color: rgba(169, 169, 169, 0.591);
 }
 main .add-steps .inbox button{
-    width: 170px;
+    width: 150px;
     padding: .9rem 1.3rem;
     background-color: blueviolet;
     color: white;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 2px;
     transition: .5s ease;
     font-family: 'Poppins';
     font-weight: 800;
-    margin: 12px 0;
+    margin: 5px 0;
 }
 main .add-steps .inbox button:hover{
     background-color: rgb(55, 29, 80);
+}
+main .add-steps .inbox button#create-title:disabled, main .add-steps .inbox button#create-title:disabled:hover{
+    background-color: #484848;
+    color: white;
+    cursor: context-menu;
+}
+.message-permission{
+    display: block;
+    background-color: rgb(45, 45, 45);
+    color: rgb(255, 255, 255);
+    padding: .5rem;
+    margin: .3rem auto;
+    border-radius: 3px;
+    width: 50%;
 }
 main .how-it-works{
     width: 60%;
@@ -140,7 +206,6 @@ main .steps-list{
     width: 60%;
     margin: auto;
     font-family: 'Poppins';
-    overflow: auto;
 }
 #error-input{
     display: none;
@@ -195,7 +260,20 @@ main .steps-list .list .list-options label{
     font-size: 16px;
 }
 
+
 @media (max-width: 460px){
+    .progress-content{
+        width: 350px;
+    }
+    .message-permission{
+        width: 95%;
+    }
+    main #saved{
+        width: 90%;
+    }
+    main .add-steps .inbox input{
+        width: 300px;
+    }
     main .add-steps .inbox button{
         width: 300px;
     }

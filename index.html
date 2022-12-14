@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="asserts/icon-image.svg">
-    <title>DevNote - Planification du développement du projet</title>
+    <title>DevNote</title>
     <link type="text/css" rel="stylesheet" href="css/global.css">
 </head>
 <body>
+    <div class="progress" id="cont-progress">
+        <div class="progress-content">
+            <h1>Hello Dear Developer</h1>
+            <p>Your list has been saved, but be careful if you want to add more steps, the previous steps will be deleted and you will lose your progress unless you will advanceYour list has been saved, but be careful if you want to add more steps, the previous steps will be deleted and you will lose your previously saved progress</p>
+            <button id="progress-retire">Ok</button>
+        </div>
+    </div>
     <main>
         <header>
             <div class="web-icon">
@@ -31,6 +38,7 @@
             <div class="inbox">
                 <input type="text" id="add-title-steps-text" placeholder="Add list steps title" class="input">
                 <input type="text" id="add-steps-text" placeholder="Add list steps" class="input">
+                <span class="message-permission" id="perms">You can no longer add titles</span>
                 <button id="create-title">Create Title</button>
                 <button id="create-steps">Create Steps</button>
             </div>
@@ -38,7 +46,9 @@
         <div class="steps-list" id="steps">
             <div class="list"></div>
         </div>
-
+        <div class="delete-contain" id="delete-progress">
+            Delete All
+        </div>
     </main>
     <script src="js/DevNote-script.js"></script>
 </body>
