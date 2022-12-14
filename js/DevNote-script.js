@@ -159,9 +159,6 @@ const classes = {
 }
 var div, h1, input, label;
 createTitle.addEventListener("click", (evt)=>{
-    var title = valueTitle.value;
-    array.push(title);
-    window.localStorage.setItem("TitleSteps", JSON.stringify(array));
     if(!valueTitle.value){
         messageError.style.display = 'block';
         messageError.innerHTML = "Please add a title to the text box to create";
@@ -171,6 +168,9 @@ createTitle.addEventListener("click", (evt)=>{
         perms.style.display = 'none';
         evt.target.removeAttribute("disabled", "");
     }else{
+        var title = valueTitle.value;
+        array.push(title);
+        window.localStorage.setItem("TitleSteps", JSON.stringify(array));
         Title();
         DELETE_PROGRESS.style.display = "block";
         perms.style.display = 'block';
@@ -179,8 +179,6 @@ createTitle.addEventListener("click", (evt)=>{
     }
 })
 create.addEventListener("click", (e)=>{
-    array_2.push(valueSteps.value)
-    window.localStorage.setItem("Steps",JSON.stringify(array_2));
     if(!valueSteps.value){
         messageError.style.display = 'block';
         messageError.innerHTML = "Please add text in the text box to create the steps";
@@ -188,6 +186,8 @@ create.addEventListener("click", (e)=>{
             messageError.style.display = "none";
         },5000)
     }else{
+        array_2.push(valueSteps.value)
+        window.localStorage.setItem("Steps",JSON.stringify(array_2));
         Steps();
         valueSteps.value = '';
     }
