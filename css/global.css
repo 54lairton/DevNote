@@ -25,6 +25,7 @@ body{
     backdrop-filter: blur(30px);
     display: grid;
     place-items: center;
+    z-index: 10;
 }
 .progress-content{
     max-width: 420px;
