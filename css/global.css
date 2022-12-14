@@ -278,6 +278,9 @@ main .steps-list .list .list-options label{
     main .add-steps .inbox button{
         width: 300px;
     }
+    main .add-steps .inbox button:hover{
+        background-color: blueviolet;
+    }
     main .how-it-works{
         width: 95%;
     }
